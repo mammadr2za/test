@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>پنل کارمند | فولاد من</title><link rel="stylesheet" href="../assets/styles.css"></head>
+<body data-page="admin">
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-logo">FM</div><div><h1>پنل کارمند</h1><p>Admin / Operator</p></div></div>
+    <div class="user-badge">تعریف بار، تغییر وضعیت، ثبت قیمت روزانه</div>
+    <a class="nav-link" href="../index.html">خانه <span>⌂</span></a>
+    <a class="nav-link" href="../login.html">ورود <span>⇥</span></a>
+    <a class="nav-link active" href="admin.html">پنل کارمند <span>⚙</span></a>
+    <a class="nav-link" href="customer.html">پنل مشتری <span>👤</span></a>
+    <a class="nav-link" href="pricing.html">نمای کامل قیمت‌ها <span>◔</span></a>
+  </aside>
+  <main class="main">
+    <div class="topbar"><div class="search"><button>⌕</button><input placeholder="جستجو شماره بار / بارنامه / مشتری"></div><div class="langs"><span class="active">FA</span><span>EN</span><span>AR</span></div></div>
+    <div class="section-head"><h3>مرکز عملیات کارخانه</h3><p id="toast">با هر تغییر وضعیت بار، پنل مشتری آنلاین بروزرسانی می‌شود.</p></div>
+
+    <div class="grid kpis">
+      <div class="card kpi"><div class="label">خروجی روزانه</div><div class="value">200 تن</div><div class="hint muted">حدود 10 ماشین</div></div>
+      <div class="card kpi"><div class="label">خروجی ماهانه</div><div class="value">5,800 تن</div><div class="hint pos">رشد 12٪</div></div>
+      <div class="card kpi"><div class="label">مشتریان فعال سال</div><div class="value">100+</div><div class="hint muted">B2B Accounts</div></div>
+      <div class="card kpi"><div class="label">تحویل به‌موقع</div><div class="value">94%</div><div class="hint pos">SLA قابل قبول</div></div>
+    </div>
+
+    <div class="grid cols-2" style="margin-top:14px;">
+      <div class="card">
+        <h3>فرم کامل تعریف بار جدید</h3>
+        <form id="shipmentForm" class="grid">
+          <div class="form-grid">
+            <div class="field"><label>نام مشتری</label><input name="customer" placeholder="آرین استیل" required></div>
+            <div class="field"><label>دسته محصول</label><select name="category"><option>میلگرد</option><option>شمش</option><option>ضایعات</option></select></div>
+            <div class="field"><label>سایز</label><input name="size" placeholder="8 / 10 / 120 / سنگین" required></div>
+            <div class="field"><label>مدل/استاندارد</label><input name="model" placeholder="A3 / 5SP / درجه1" required></div>
+            <div class="field"><label>کارخانه</label><input name="factory" placeholder="یاسوج" required></div>
+            <div class="field"><label>وزن (تن)</label><input name="weight" type="number" step="0.1" required></div>
+            <div class="field"><label>پلاک</label><input name="plate" placeholder="65ب234" required></div>
+            <div class="field"><label>شماره بارنامه</label><input name="waybill" placeholder="WB-1001" required></div>
+            <div class="field"><label>تاریخ خروج</label><input name="date" type="date" required></div>
+          </div>
+          <button class="btn" type="submit">ثبت بار جدید</button>
+        </form>
+      </div>
+      <div class="card">
+        <h3>فرم ثبت قیمت روزانه (بایگانی خودکار)</h3>
+        <form id="priceForm" class="grid">
+          <div class="form-grid-2">
+            <div class="field"><label>تاریخ</label><input name="date" type="date" required></div>
+            <div class="field"><label>دسته</label><select name="category"><option>میلگرد</option><option>شمش</option><option>ضایعات</option></select></div>
+            <div class="field"><label>سایز</label><input name="size" placeholder="8 / 120 / سنگین" required></div>
+            <div class="field"><label>مدل</label><input name="model" placeholder="A3 / 5SP" required></div>
+            <div class="field"><label>کارخانه</label><input name="factory" placeholder="یاسوج" required></div>
+            <div class="field"><label>شهر</label><input name="city" placeholder="یاسوج" required></div>
+            <div class="field"><label>قیمت (تومان)</label><input name="price" type="number" required></div>
+          </div>
+          <button class="btn" type="submit">ثبت قیمت</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <h3>مدیریت بارها و تغییر وضعیت توسط کارمند</h3>
+      <div class="table-wrap"><table><thead><tr><th>شماره بار</th><th>مشتری</th><th>محصول</th><th>کارخانه</th><th>وزن</th><th>پلاک</th><th>بارنامه</th><th>تاریخ</th><th>وضعیت</th></tr></thead><tbody id="adminShipments"></tbody></table></div>
+    </div>
+  </main>
+</div>
+<script src="../assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>مرکز قیمت‌ها | فولاد من</title><link rel="stylesheet" href="../assets/styles.css"></head>
+<body data-page="pricing">
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-logo">FM</div><div><h1>مرکز قیمت‌گذاری</h1><p>Daily + Historical</p></div></div>
+    <div class="user-badge">میلگرد (8 تا 32)، شمش، ضایعات + آرشیو و نمودار</div>
+    <a class="nav-link" href="../index.html">خانه <span>⌂</span></a>
+    <a class="nav-link" href="admin.html">پنل کارمند <span>⚙</span></a>
+    <a class="nav-link" href="customer.html">پنل مشتری <span>👤</span></a>
+    <a class="nav-link active" href="pricing.html">مرکز قیمت‌ها <span>◔</span></a>
+  </aside>
+  <main class="main">
+    <div class="topbar"><div class="search"><button>⌕</button><input placeholder="میلگرد 8 یاسوج / شمش 150 یزد / ضایعات سنگین"></div><div class="langs"><span class="active">FA</span><span>EN</span><span>AR</span></div></div>
+    <div class="section-head"><h3>نمایش قیمت‌ها با نمودار تخصصی</h3><p id="priceRange">رنج قیمت براساس فیلتر نمایش داده می‌شود.</p></div>
+    <div class="toolbar">
+      <select id="filterCategory"><option>همه</option><option>میلگرد</option><option>شمش</option><option>ضایعات</option></select>
+      <select id="filterSize"><option>همه</option><option>8</option><option>10</option><option>12</option><option>16</option><option>20</option><option>24</option><option>28</option><option>32</option><option>120</option><option>150</option><option>سنگین</option></select>
+      <select id="filterFactory"><option>همه</option><option>یاسوج</option><option>سبزوار</option><option>پرمان</option><option>اهواز</option><option>یزد</option></select>
+      <input type="date" value="2026-02-16">
+    </div>
+
+    <div class="card" style="margin-top:12px;">
+      <h3>نمودار روند قیمت + میانگین متحرک</h3>
+      <div class="chart">
+        <svg viewBox="0 0 680 290" preserveAspectRatio="none">
+          <polyline id="priceArea" fill="rgba(28,87,143,.15)" points="0,250 680,250 680,290 0,290"/>
+          <polyline id="priceLine" fill="none" stroke="#1c578f" stroke-width="4" points="0,250 680,250"/>
+          <polyline id="avgLine" fill="none" stroke="#1f9d76" stroke-width="3" stroke-dasharray="8 6" points="0,250 680,250"/>
+        </svg>
+      </div>
+      <div class="legend"><span class="l1">قیمت روزانه</span><span class="l2">میانگین متحرک 3 روزه</span></div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <h3>آرشیو قیمت‌ها (قابل خروجی)</h3>
+      <div class="table-wrap"><table><thead><tr><th>تاریخ</th><th>دسته</th><th>سایز</th><th>مدل</th><th>کارخانه</th><th>شهر</th><th>قیمت</th></tr></thead><tbody id="priceRows"></tbody></table></div>
+    </div>
+  </main>
+</div>
+<script src="../assets/app.js"></script>
+</body>
+</html>
