@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ورود | فولاد من</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="login">
+  <div class="auth-wrap">
+    <div class="auth-card">
+      <div class="auth-visual">
+        <h2>ورود امن به فولاد من</h2>
+        <p>پنل‌های کاملاً جداگانه برای کارمند و مشتری. کارمند بار ثبت و وضعیت را تغییر می‌دهد، مشتری وضعیت را آنلاین و لحظه‌ای مشاهده می‌کند.</p>
+        <ul class="timeline"><li>قیمت‌گذاری روزانه + بایگانی</li><li>ثبت بار و تغییر وضعیت</li><li>گزارش و خروجی اکسل</li><li>پشتیبانی سه‌زبانه FA/EN/AR</li></ul>
+      </div>
+      <div class="auth-form">
+        <h3>فرم ورود</h3>
+        <form id="loginForm" class="grid">
+          <div class="field"><label>نقش کاربری</label><select name="role"><option value="employee">کارمند</option><option value="customer">مشتری</option></select></div>
+          <div class="field"><label>شماره موبایل</label><input name="phone" placeholder="0912..." required></div>
+          <div class="field"><label>رمز عبور</label><input name="password" type="password" required></div>
+          <button class="btn" type="submit">ورود</button>
+        </form>
+        <div class="actions" style="margin-top:8px;">
+          <a class="btn" href="register-employee.html">ثبت‌نام کارمند</a>
+          <a class="btn" href="register-customer.html">ثبت‌نام مشتری</a>
+        </div>
+        <div id="toast" class="note">نمونه ورود کارمند: 09120000001 / 123456</div>
+      </div>
+    </div>
+  </div>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ثبت حساب مشتری | فولاد من</title><link rel="stylesheet" href="assets/styles.css"></head>
+<body data-page="register">
+  <div class="auth-wrap">
+    <div class="auth-card">
+      <div class="auth-visual">
+        <h2>تعریف حساب مشتری B2B</h2>
+        <p>هر مشتری حساب اختصاصی دارد و می‌تواند بارهای ارسالی خود را آنلاین ببیند.</p>
+      </div>
+      <div class="auth-form">
+        <h3>فرم ساخت حساب مشتری</h3>
+        <form id="registerForm" class="grid">
+          <input type="hidden" name="role" value="customer">
+          <div class="field"><label>نام شرکت / مشتری</label><input name="name" required></div>
+          <div class="field"><label>موبایل</label><input name="phone" required></div>
+          <div class="field"><label>رمز عبور</label><input name="password" type="password" required></div>
+          <button class="btn" type="submit">ایجاد حساب مشتری</button>
+        </form>
+        <a class="btn" href="login.html">بازگشت به ورود</a>
+        <div id="toast" class="note">بعد از ثبت حساب، ورود کنید و بارهای خود را مشاهده کنید.</div>
+      </div>
+    </div>
+  </div>
+<script src="assets/app.js"></script>
+</body>
+</html>
