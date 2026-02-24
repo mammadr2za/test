@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>پنل کارمند | فولاد من</title><link rel="stylesheet" href="../assets/styles.css"></head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-logo">FM</div><div><h1>پنل کارمند</h1><p>Admin / Operator</p></div></div>
+    <a class="nav-link" href="../index.html">داشبورد کلان <span>⌂</span></a>
+    <a class="nav-link" href="pricing.html">قیمت‌گذاری <span>◔</span></a>
+    <a class="nav-link" href="logistics.html">حمل و بار <span>⇄</span></a>
+    <a class="nav-link" href="customer.html">پنل مشتری <span>👤</span></a>
+    <a class="nav-link active" href="admin.html">پنل کارمند <span>⚙</span></a>
+    <a class="nav-link" href="content.html">محتوا <span>▶</span></a>
+  </aside>
+  <main class="main">
+    <div class="topbar"><div class="search"><button>⌕</button><input placeholder="جستجو در بارها، مشتریان، کارخانه..."></div><div class="lang-switch"><span class="active">FA</span><span>EN</span><span>AR</span></div></div>
+    <div class="page-head"><div><h2>کنترل‌تاور عملیات</h2><p>ثبت بار خروجی، مدیریت وضعیت، کنترل کیفیت داده</p></div></div>
+    <div class="grid kpi">
+      <div class="card kpi-item"><div class="label">بار ثبت شده امروز</div><div class="value">۳۲</div><div class="delta pos">بدون خطای حیاتی</div></div>
+      <div class="card kpi-item"><div class="label">در حال بارگیری</div><div class="value">۸</div><div class="delta">زمان انتظار ۲۳ دقیقه</div></div>
+      <div class="card kpi-item"><div class="label">در مسیر تحویل</div><div class="value">۲۱</div><div class="delta">۴ مورد با تاخیر</div></div>
+      <div class="card kpi-item"><div class="label">تحویل‌شده</div><div class="value">۴۸</div><div class="delta pos">SLA: 95%</div></div>
+    </div>
+
+    <div class="grid cols-2" style="margin-top:14px;">
+      <div class="card">
+        <h3>ثبت سریع بار خروجی</h3>
+        <div class="page-grid">
+          <div class="module-card card"><h3>۱) اطلاعات پایه</h3><p>مشتری، کارخانه، محصول، سایز، استاندارد</p></div>
+          <div class="module-card card"><h3>۲) اطلاعات حمل</h3><p>راننده، پلاک، نوع خودرو، وزن خالص/ناخالص</p></div>
+          <div class="module-card card"><h3>۳) زمان‌بندی</h3><p>تاریخ خروج، ETA، مقصد، مسئول تایید</p></div>
+          <div class="module-card card"><h3>۴) انتشار</h3><p>ارسال اعلان به مشتری + ثبت Audit Log</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>گردش وضعیت بار</h3>
+        <ul class="timeline">
+          <li>Draft → تأیید انبار</li>
+          <li>تأیید انبار → خروج از کارخانه</li>
+          <li>در مسیر → تحویل شده</li>
+          <li>مسیر ویژه: توقف / برگشت / لغو</li>
+        </ul>
+        <div class="chart" style="height:170px">
+          <svg viewBox="0 0 600 170" preserveAspectRatio="none">
+            <rect x="20" y="22" width="130" height="24" rx="8" fill="#dff4ee" /><text x="85" y="39" text-anchor="middle" fill="#116c57" font-size="12">Draft</text>
+            <rect x="170" y="22" width="130" height="24" rx="8" fill="#e8f1fc" /><text x="235" y="39" text-anchor="middle" fill="#245f94" font-size="12">Factory Out</text>
+            <rect x="320" y="22" width="130" height="24" rx="8" fill="#fff1c8" /><text x="385" y="39" text-anchor="middle" fill="#8e6a00" font-size="12">In Transit</text>
+            <rect x="470" y="22" width="110" height="24" rx="8" fill="#dff4ee" /><text x="525" y="39" text-anchor="middle" fill="#116c57" font-size="12">Delivered</text>
+            <line x1="150" y1="34" x2="170" y2="34" stroke="#8ba8c8"/><line x1="300" y1="34" x2="320" y2="34" stroke="#8ba8c8"/><line x1="450" y1="34" x2="470" y2="34" stroke="#8ba8c8"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <h3>آخرین بارها</h3>
+      <div class="table-wrap"><table><thead><tr><th>شماره بار</th><th>مشتری</th><th>کارخانه</th><th>وزن</th><th>پلاک</th><th>وضعیت</th></tr></thead><tbody>
+      <tr><td>L-2401</td><td>آرین استیل</td><td>ذوب‌آهن اصفهان</td><td>۲۴ تن</td><td>۶۵ب۲۳۴-ایران۳۴</td><td><span class="badge warn">در مسیر</span></td></tr>
+      <tr><td>L-2402</td><td>پارس متال</td><td>کویر کاشان</td><td>۲۱ تن</td><td>۳۴ج۵۷۸-ایران۲۱</td><td><span class="badge success">تحویل شده</span></td></tr>
+      <tr><td>L-2403</td><td>تجارت شرق</td><td>نیشابور</td><td>۲۶ تن</td><td>۴۱د۱۹۰-ایران۴۴</td><td><span class="badge danger">تاخیر</span></td></tr>
+      </tbody></table></div>
+    </div>
+  </main>
+</div>
+</body>
+</html>
