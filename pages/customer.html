@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>پنل مشتری | فولاد من</title><link rel="stylesheet" href="../assets/styles.css"></head>
+<body data-page="customer">
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-logo">FM</div><div><h1>پنل مشتری</h1><p>Customer Portal</p></div></div>
+    <div class="user-badge">کاربر: مشتری B2B | مشاهده آنلاین وضعیت بارها</div>
+    <a class="nav-link" href="../index.html">داشبورد کلان <span>⌂</span></a>
+    <a class="nav-link" href="admin.html">پنل کارمند <span>⚙</span></a>
+    <a class="nav-link active" href="customer.html">پنل مشتری <span>👤</span></a>
+    <a class="nav-link" href="pricing.html">قیمت‌گذاری <span>◔</span></a>
+    <a class="nav-link" href="logistics.html">حمل و بار <span>⇄</span></a>
+  </aside>
+  <main class="main">
+    <div class="topbar"><div class="search"><button>⌕</button><input placeholder="جستجوی بار بر اساس شماره یا تاریخ"></div><div class="langs"><span class="active">FA</span><span>EN</span><span>AR</span></div></div>
+    <div class="section-head"><h3>مشاهده لحظه‌ای محصول ارسالی</h3><p>دقیقاً همان داده‌ای که کارمند ثبت کرده است.</p></div>
+    <div class="toolbar"><label>انتخاب حساب مشتری: <select id="customerName"><option>آرین استیل</option><option>پارس متال</option><option>تجارت شرق</option></select></label></div>
+    <div class="grid kpis" style="margin-top:12px;">
+      <div class="card kpi"><div class="label">جمع تناژ قابل مشاهده</div><div class="value" id="totalWeight">-</div><div class="hint muted">تجمیع خودکار بارهای شما</div></div>
+      <div class="card kpi"><div class="label">خروجی فایل</div><div class="value">Excel / CSV</div><div class="hint pos">آماده گزارش مالی</div></div>
+      <div class="card kpi"><div class="label">تفکیک تاریخی</div><div class="value">روزانه</div><div class="hint muted">۸، ۹، ۱۰ هر ماه</div></div>
+      <div class="card kpi"><div class="label">وضعیت آنلاین</div><div class="value">Realtime</div><div class="hint pos">بدون تماس تلفنی</div></div>
+    </div>
+    <div class="card" style="margin-top:14px;">
+      <h3>جدول بارهای مشتری</h3>
+      <div class="table-wrap"><table><thead><tr><th>شماره بار</th><th>محصول</th><th>کارخانه</th><th>وزن</th><th>پلاک</th><th>تاریخ</th><th>وضعیت</th></tr></thead><tbody id="customerShipments"></tbody></table></div>
+    </div>
+    <div class="card" style="margin-top:14px;"><h3>گزارش تجمیعی نمونه</h3><ul class="timeline"><li>امروز: 10 تن</li><li>فردا: 10 تن</li><li>پس‌فردا: 10 تن</li><li>خروجی کلی: 100 تن (بازه انتخابی)</li></ul></div>
+  </main>
+</div>
+<script src="../assets/app.js"></script>
+</body>
+</html>

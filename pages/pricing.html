@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>قیمت‌گذاری | فولاد من</title><link rel="stylesheet" href="../assets/styles.css"></head>
+<body data-page="pricing">
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-logo">FM</div><div><h1>قیمت‌گذاری روزانه</h1><p>Archive + Trend</p></div></div>
+    <a class="nav-link" href="../index.html">داشبورد کلان <span>⌂</span></a>
+    <a class="nav-link" href="admin.html">پنل کارمند <span>⚙</span></a>
+    <a class="nav-link" href="customer.html">پنل مشتری <span>👤</span></a>
+    <a class="nav-link active" href="pricing.html">قیمت‌گذاری <span>◔</span></a>
+    <a class="nav-link" href="logistics.html">حمل و بار <span>⇄</span></a>
+  </aside>
+  <main class="main">
+    <div class="topbar"><div class="search"><button>⌕</button><input placeholder="جستجو: میلگرد 8 یاسوج، شمش 150 یزد..."></div><div class="langs"><span class="active">FA</span><span>EN</span><span>AR</span></div></div>
+    <div class="section-head"><h3>موتور قیمت‌گذاری فولاد (روزانه + بایگانی)</h3><p>میلگرد، شمش، ضایعات با سایز/مدل/کارخانه/شهر و نمودار رشد قیمت</p></div>
+
+    <div class="toolbar">
+      <select id="filterCategory"><option>همه</option><option>میلگرد</option><option>شمش</option><option>ضایعات</option></select>
+      <select id="filterSize"><option>همه</option><option>8</option><option>10</option><option>12</option><option>120</option><option>150</option><option>سنگین</option></select>
+      <select id="filterFactory"><option>همه</option><option>یاسوج</option><option>سبزوار</option><option>پرمان</option><option>اهواز</option><option>یزد</option></select>
+      <input type="date" value="2026-02-16" />
+    </div>
+
+    <div class="card" style="margin-top:12px;">
+      <h3>نمودار قیمت (نمونه: میلگرد سایز 8 یاسوج)</h3>
+      <div class="chart"><svg viewBox="0 0 680 240" preserveAspectRatio="none"><polyline id="priceArea" fill="rgba(31,90,145,.17)" points="0,220 680,220 680,240 0,240"/><polyline id="priceLine" fill="none" stroke="#1f5a91" stroke-width="4" points="0,220 680,220"/></svg></div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <h3>آرشیو قیمت‌ها (قابل خروجی)</h3>
+      <div class="table-wrap"><table><thead><tr><th>تاریخ</th><th>دسته</th><th>سایز</th><th>مدل</th><th>کارخانه</th><th>شهر</th><th>قیمت (تومان)</th></tr></thead><tbody id="priceRows"></tbody></table></div>
+    </div>
+  </main>
+</div>
+<script src="../assets/app.js"></script>
+</body>
+</html>

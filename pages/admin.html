@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>پنل کارمند | فولاد من</title><link rel="stylesheet" href="../assets/styles.css"></head>
+<body data-page="admin">
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-logo">FM</div><div><h1>پنل کارمند</h1><p>Admin / Operator</p></div></div>
+    <div class="user-badge">کاربر: اپراتور کارخانه | سطح دسترسی: مدیریت بار + قیمت</div>
+    <a class="nav-link" href="../index.html">داشبورد کلان <span>⌂</span></a>
+    <a class="nav-link active" href="admin.html">پنل کارمند <span>⚙</span></a>
+    <a class="nav-link" href="customer.html">پنل مشتری <span>👤</span></a>
+    <a class="nav-link" href="pricing.html">قیمت‌گذاری <span>◔</span></a>
+    <a class="nav-link" href="logistics.html">حمل و بار <span>⇄</span></a>
+  </aside>
+  <main class="main">
+    <div class="topbar"><div class="search"><button>⌕</button><input placeholder="جستجو بار، پلاک، مشتری"></div><div class="langs"><span class="active">FA</span><span>EN</span><span>AR</span></div></div>
+    <div class="section-head"><h3>مدیریت عملیات بارگیری و ارسال</h3><p>هر تغییر وضعیت اینجا، در پنل مشتری هم‌زمان دیده می‌شود.</p></div>
+    <div class="grid kpis">
+      <div class="card kpi"><div class="label">بارهای امروز</div><div class="value">۱۰ ماشین</div><div class="hint muted">خروجی روزانه ~ ۲۰۰ تن</div></div>
+      <div class="card kpi"><div class="label">مشتریان سالانه</div><div class="value">+۱۰۰</div><div class="hint muted">حساب‌های B2B فعال</div></div>
+      <div class="card kpi"><div class="label">بار در مسیر</div><div class="value">۴</div><div class="hint pos">قابل ردیابی آنلاین</div></div>
+      <div class="card kpi"><div class="label">تحویل‌شده</div><div class="value">۵</div><div class="hint pos">SLA: 94%</div></div>
+    </div>
+    <div class="card" style="margin-top:14px;">
+      <h3>فرم ثبت بار خروجی (نمونه UI)</h3>
+      <div class="strip">
+        <div class="mini">مشتری: آرین استیل</div><div class="mini">محصول: میلگرد 8 A3</div><div class="mini">کارخانه: یاسوج</div><div class="mini">وزن: 10 تن</div><div class="mini">پلاک: 65ب234</div><div class="mini">بارنامه: WB-9031</div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px;">
+      <h3>لیست بارها + تغییر وضعیت توسط کارمند</h3>
+      <p id="syncHint" class="muted">با تغییر Status، مشتری همان لحظه وضعیت جدید را می‌بیند.</p>
+      <div class="table-wrap"><table><thead><tr><th>شماره بار</th><th>مشتری</th><th>محصول</th><th>کارخانه</th><th>وزن</th><th>پلاک</th><th>بارنامه</th><th>تغییر وضعیت</th></tr></thead><tbody id="adminShipments"></tbody></table></div>
+    </div>
+  </main>
+</div>
+<script src="../assets/app.js"></script>
+</body>
+</html>
