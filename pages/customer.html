@@ -1,41 +1,34 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>پنل مشتری | فولاد من</title><link rel="stylesheet" href="../assets/styles.css"></head>
-<body>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>پنل مشتری | فولاد من</title><link rel="stylesheet" href="../assets/styles.css"></head>
+<body data-page="customer">
 <div class="layout">
   <aside class="sidebar">
-    <div class="brand"><div class="brand-logo">FM</div><div><h1>پنل مشتری</h1><p>Customer Experience</p></div></div>
+    <div class="brand"><div class="brand-logo">FM</div><div><h1>پنل مشتری</h1><p>Customer Portal</p></div></div>
+    <div class="user-badge">کاربر: مشتری B2B | مشاهده آنلاین وضعیت بارها</div>
     <a class="nav-link" href="../index.html">داشبورد کلان <span>⌂</span></a>
+    <a class="nav-link" href="admin.html">پنل کارمند <span>⚙</span></a>
+    <a class="nav-link active" href="customer.html">پنل مشتری <span>👤</span></a>
     <a class="nav-link" href="pricing.html">قیمت‌گذاری <span>◔</span></a>
     <a class="nav-link" href="logistics.html">حمل و بار <span>⇄</span></a>
-    <a class="nav-link active" href="customer.html">پنل مشتری <span>👤</span></a>
-    <a class="nav-link" href="admin.html">پنل کارمند <span>⚙</span></a>
-    <a class="nav-link" href="content.html">محتوا <span>▶</span></a>
   </aside>
   <main class="main">
-    <div class="topbar"><div class="search"><button>⌕</button><input placeholder="جستجوی سفارش یا شماره بار"></div><div class="lang-switch"><span class="active">FA</span><span>EN</span><span>AR</span></div></div>
-    <div class="page-head"><div><h2>پیگیری لحظه‌ای سفارش‌ها</h2><p>دقت داده بالا + خروجی سریع برای تیم بازرگانی</p></div></div>
-    <div class="grid kpi">
-      <div class="card kpi-item"><div class="label">سفارش فعال</div><div class="value">۱۴</div><div class="delta">۶ مورد در مسیر</div></div>
-      <div class="card kpi-item"><div class="label">جمع تناژ ماه جاری</div><div class="value">۱,۵۸۰ تن</div><div class="delta pos">▲ ۹٪</div></div>
-      <div class="card kpi-item"><div class="label">میانگین زمان تحویل</div><div class="value">۲.۳ روز</div><div class="delta pos">بهبود عملکرد</div></div>
-      <div class="card kpi-item"><div class="label">خروجی اکسل</div><div class="value">دانلود فوری</div><div class="delta">CSV / XLSX</div></div>
+    <div class="topbar"><div class="search"><button>⌕</button><input placeholder="جستجوی بار بر اساس شماره یا تاریخ"></div><div class="langs"><span class="active">FA</span><span>EN</span><span>AR</span></div></div>
+    <div class="section-head"><h3>مشاهده لحظه‌ای محصول ارسالی</h3><p>دقیقاً همان داده‌ای که کارمند ثبت کرده است.</p></div>
+    <div class="toolbar"><label>انتخاب حساب مشتری: <select id="customerName"><option>آرین استیل</option><option>پارس متال</option><option>تجارت شرق</option></select></label></div>
+    <div class="grid kpis" style="margin-top:12px;">
+      <div class="card kpi"><div class="label">جمع تناژ قابل مشاهده</div><div class="value" id="totalWeight">-</div><div class="hint muted">تجمیع خودکار بارهای شما</div></div>
+      <div class="card kpi"><div class="label">خروجی فایل</div><div class="value">Excel / CSV</div><div class="hint pos">آماده گزارش مالی</div></div>
+      <div class="card kpi"><div class="label">تفکیک تاریخی</div><div class="value">روزانه</div><div class="hint muted">۸، ۹، ۱۰ هر ماه</div></div>
+      <div class="card kpi"><div class="label">وضعیت آنلاین</div><div class="value">Realtime</div><div class="hint pos">بدون تماس تلفنی</div></div>
     </div>
-
     <div class="card" style="margin-top:14px;">
-      <h3>جدول وضعیت بارها</h3>
-      <div class="table-wrap"><table><thead><tr><th>شماره بار</th><th>محصول</th><th>کارخانه</th><th>وزن</th><th>پلاک</th><th>تاریخ خروج</th><th>وضعیت</th></tr></thead><tbody>
-        <tr><td>L-2401</td><td>میلگرد 16 A3</td><td>ذوب‌آهن اصفهان</td><td>۲۴ تن</td><td>۶۵ب۲۳۴</td><td>۱۴۰۴/۱۲/۰۶</td><td><span class="badge warn">در مسیر</span></td></tr>
-        <tr><td>L-2402</td><td>شمش 150x150</td><td>اهواز</td><td>۲۱ تن</td><td>۳۴ج۵۷۸</td><td>۱۴۰۴/۱۲/۰۴</td><td><span class="badge success">تحویل شده</span></td></tr>
-        <tr><td>L-2403</td><td>ضایعات سنگین</td><td>تبریز</td><td>۲۵ تن</td><td>۹۰د۳۴۴</td><td>۱۴۰۴/۱۲/۰۳</td><td><span class="badge danger">تاخیر</span></td></tr>
-      </tbody></table></div>
+      <h3>جدول بارهای مشتری</h3>
+      <div class="table-wrap"><table><thead><tr><th>شماره بار</th><th>محصول</th><th>کارخانه</th><th>وزن</th><th>پلاک</th><th>تاریخ</th><th>وضعیت</th></tr></thead><tbody id="customerShipments"></tbody></table></div>
     </div>
-
-    <div class="grid cols-2" style="margin-top:14px;">
-      <div class="card"><h3>روند تناژ ارسالی</h3><div class="chart"><svg viewBox="0 0 600 240" preserveAspectRatio="none"><polyline fill="rgba(26,121,197,.17)" points="0,220 80,200 160,180 240,164 320,138 400,126 480,86 560,72 600,50 600,240 0,240"/><polyline fill="none" stroke="#2272b7" stroke-width="4" points="0,220 80,200 160,180 240,164 320,138 400,126 480,86 560,72 600,50"/></svg></div></div>
-      <div class="card"><h3>ابزارهای گزارش</h3><ul class="timeline"><li>گزارش تجمیعی بر اساس تاریخ</li><li>فیلتر بر اساس کارخانه/محصول</li><li>مقایسه ماهانه خرید</li><li>خروجی Excel برای حسابداری</li></ul><a class="btn" href="#">دانلود گزارش نمونه</a></div>
-    </div>
+    <div class="card" style="margin-top:14px;"><h3>گزارش تجمیعی نمونه</h3><ul class="timeline"><li>امروز: 10 تن</li><li>فردا: 10 تن</li><li>پس‌فردا: 10 تن</li><li>خروجی کلی: 100 تن (بازه انتخابی)</li></ul></div>
   </main>
 </div>
+<script src="../assets/app.js"></script>
 </body>
 </html>

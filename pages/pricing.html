@@ -1,58 +1,38 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ماژول قیمت‌گذاری | فولاد من</title><link rel="stylesheet" href="../assets/styles.css"></head>
-<body>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>قیمت‌گذاری | فولاد من</title><link rel="stylesheet" href="../assets/styles.css"></head>
+<body data-page="pricing">
 <div class="layout">
   <aside class="sidebar">
-    <div class="brand"><div class="brand-logo">FM</div><div><h1>قیمت‌گذاری</h1><p>Daily Pricing Engine</p></div></div>
+    <div class="brand"><div class="brand-logo">FM</div><div><h1>قیمت‌گذاری روزانه</h1><p>Archive + Trend</p></div></div>
     <a class="nav-link" href="../index.html">داشبورد کلان <span>⌂</span></a>
+    <a class="nav-link" href="admin.html">پنل کارمند <span>⚙</span></a>
+    <a class="nav-link" href="customer.html">پنل مشتری <span>👤</span></a>
     <a class="nav-link active" href="pricing.html">قیمت‌گذاری <span>◔</span></a>
     <a class="nav-link" href="logistics.html">حمل و بار <span>⇄</span></a>
-    <a class="nav-link" href="customer.html">پنل مشتری <span>👤</span></a>
-    <a class="nav-link" href="admin.html">پنل کارمند <span>⚙</span></a>
-    <a class="nav-link" href="content.html">محتوا <span>▶</span></a>
   </aside>
   <main class="main">
-    <div class="topbar"><div class="search"><button>⌕</button><input placeholder="فیلتر: دسته، سایز، کارخانه، شهر"></div><div class="lang-switch"><span class="active">FA</span><span>EN</span><span>AR</span></div></div>
-    <div class="page-head"><div><h2>مرکز قیمت روز فولاد</h2><p>آرشیو تاریخچه + نمودار نوسان + مقایسه کارخانه‌ها</p></div></div>
+    <div class="topbar"><div class="search"><button>⌕</button><input placeholder="جستجو: میلگرد 8 یاسوج، شمش 150 یزد..."></div><div class="langs"><span class="active">FA</span><span>EN</span><span>AR</span></div></div>
+    <div class="section-head"><h3>موتور قیمت‌گذاری فولاد (روزانه + بایگانی)</h3><p>میلگرد، شمش، ضایعات با سایز/مدل/کارخانه/شهر و نمودار رشد قیمت</p></div>
 
-    <div class="grid kpi">
-      <div class="card kpi-item"><div class="label">میلگرد A3 16</div><div class="value">۳۲,۸۰۰</div><div class="delta pos">+۱.۲٪</div></div>
-      <div class="card kpi-item"><div class="label">شمش 150x150</div><div class="value">۲۹,۱۰۰</div><div class="delta neg">-۰.۸٪</div></div>
-      <div class="card kpi-item"><div class="label">ضایعات سنگین</div><div class="value">۱۸,۶۰۰</div><div class="delta pos">+۰.۵٪</div></div>
-      <div class="card kpi-item"><div class="label">آخرین بروزرسانی</div><div class="value">۱۴۰۴/۱۲/۰۶</div><div class="delta">۱۰:۳۵</div></div>
+    <div class="toolbar">
+      <select id="filterCategory"><option>همه</option><option>میلگرد</option><option>شمش</option><option>ضایعات</option></select>
+      <select id="filterSize"><option>همه</option><option>8</option><option>10</option><option>12</option><option>120</option><option>150</option><option>سنگین</option></select>
+      <select id="filterFactory"><option>همه</option><option>یاسوج</option><option>سبزوار</option><option>پرمان</option><option>اهواز</option><option>یزد</option></select>
+      <input type="date" value="2026-02-16" />
     </div>
 
-    <div class="grid cols-2" style="margin-top:14px;">
-      <div class="card">
-        <h3>نمودار تغییرات قیمت (۳۰ روز)</h3>
-        <div class="chart"><svg viewBox="0 0 600 240" preserveAspectRatio="none">
-          <polyline fill="rgba(30,118,194,.16)" points="0,205 60,198 120,190 180,183 240,160 300,150 360,142 420,118 480,98 540,76 600,66 600,240 0,240"/>
-          <polyline fill="none" stroke="#1e76c2" stroke-width="4" points="0,205 60,198 120,190 180,183 240,160 300,150 360,142 420,118 480,98 540,76 600,66"/>
-        </svg></div>
-      </div>
-      <div class="card">
-        <h3>مقایسه کارخانه‌ها</h3>
-        <table>
-          <thead><tr><th>کارخانه</th><th>قیمت میلگرد 16</th><th>تغییر</th></tr></thead>
-          <tbody>
-            <tr><td>ذوب‌آهن</td><td>۳۲,۸۰۰</td><td><span class="badge success">+۳۰۰</span></td></tr>
-            <tr><td>کویر کاشان</td><td>۳۲,۵۰۰</td><td><span class="badge warn">۰</span></td></tr>
-            <tr><td>نیشابور</td><td>۳۲,۳۰۰</td><td><span class="badge danger">-۲۰۰</span></td></tr>
-          </tbody>
-        </table>
-      </div>
+    <div class="card" style="margin-top:12px;">
+      <h3>نمودار قیمت (نمونه: میلگرد سایز 8 یاسوج)</h3>
+      <div class="chart"><svg viewBox="0 0 680 240" preserveAspectRatio="none"><polyline id="priceArea" fill="rgba(31,90,145,.17)" points="0,220 680,220 680,240 0,240"/><polyline id="priceLine" fill="none" stroke="#1f5a91" stroke-width="4" points="0,220 680,220"/></svg></div>
     </div>
 
     <div class="card" style="margin-top:14px;">
-      <h3>آرشیو قیمت روزانه محصولات</h3>
-      <div class="table-wrap"><table><thead><tr><th>دسته</th><th>مشخصات</th><th>شهر</th><th>کارخانه</th><th>تاریخ</th><th>قیمت</th></tr></thead><tbody>
-        <tr><td>میلگرد</td><td>سایز 8-32 / A2-A4</td><td>اصفهان</td><td>ذوب آهن</td><td>۱۴۰۴/۱۲/۰۶</td><td>۳۲,۸۰۰</td></tr>
-        <tr><td>شمش</td><td>120 / 150</td><td>اهواز</td><td>فولاد خوزستان</td><td>۱۴۰۴/۱۲/۰۶</td><td>۲۹,۱۰۰</td></tr>
-        <tr><td>ضایعات</td><td>سبک / سنگین</td><td>تهران</td><td>بازار آهن شادآباد</td><td>۱۴۰۴/۱۲/۰۶</td><td>۱۸,۶۰۰</td></tr>
-      </tbody></table></div>
+      <h3>آرشیو قیمت‌ها (قابل خروجی)</h3>
+      <div class="table-wrap"><table><thead><tr><th>تاریخ</th><th>دسته</th><th>سایز</th><th>مدل</th><th>کارخانه</th><th>شهر</th><th>قیمت (تومان)</th></tr></thead><tbody id="priceRows"></tbody></table></div>
     </div>
   </main>
 </div>
+<script src="../assets/app.js"></script>
 </body>
 </html>
